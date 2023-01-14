@@ -1,0 +1,8 @@
+class Solution(object):
+    def isPowerOfTwo(self, n):
+        result = False
+        for i in range(31):
+            if n == 2**i:
+                result = True
+        
+        return result
