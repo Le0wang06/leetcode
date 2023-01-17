@@ -1,0 +1,25 @@
+class Solution(object):
+    def isValid(self, s):
+        
+        brackets = []
+        stackCounter = []
+        
+        for i in range(0,len(s)):
+            brackets.append(s[i])
+        
+        for i in range(0,len(brackets)):
+            if brackets[i] == "(" or brackets[i] == "[" or brackets[i] == "{":
+                stackCounter.append(brackets[i])
+            else:
+                if (len(stackCounter) == 0):
+                    return False
+                if  brackets[i] == ")":
+                    if ( "(" != stackCounter.pop()):
+                            return False 
+                if  brackets[i] == "]":
+                    if ( "[" != stackCounter.pop()):
+                            return False 
+                if  brackets[i] == "}":
+                    if ( "{" != stackCounter.pop()):
+                            return False 
+        return (len(stackCounter)==0)
