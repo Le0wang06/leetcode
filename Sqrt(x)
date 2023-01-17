@@ -1,0 +1,16 @@
+class Solution(object):
+    def mySqrt(self, x):
+        counter = 1
+        
+        if (x == 0):
+            return 0
+        if x ==2:
+            return 1
+        else:
+            while counter < x:
+                if (counter*counter == x):
+                    return counter
+                if ( counter*counter >x):
+                    return counter-1
+                counter+=1
+        return counter
