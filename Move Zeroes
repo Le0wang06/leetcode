@@ -1,0 +1,9 @@
+class Solution(object):
+    def moveZeroes(self, nums):
+        i= 0
+        counter= 0
+        while counter < len(nums):
+            if nums[i] == 0: nums.append(nums.pop(i))
+            else: 
+                i += 1
+            counter += 1
