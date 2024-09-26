@@ -28,5 +28,3 @@ class Solution(object):
             else:
                 return counter
         return counter
-
-    
