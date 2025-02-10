@@ -13,4 +13,5 @@ class Solution(object):
                     stack.pop()
             else:
                 stack.append(each)
-        return "".join(stack)        
+        return "".join(stack)      
+
