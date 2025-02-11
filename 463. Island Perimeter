@@ -15,5 +15,4 @@ class Solution(object):
                 # Check bottom neighbor
                 if r + 1 < rows and grid[r + 1][c] == 1:
                     perimeter -= 2  # One shared side
-
     return perimeter
