@@ -1,0 +1,17 @@
+class Solution(object):
+    def wordPattern(self, pattern, s):
+        separate = s.split()  # Split the string into words
+        if len(pattern) != len(separate):  # Length mismatch, return False
+            return False
+        
+        dict = {}  # Dictionary to store pattern-to-word mapping
+        for i in range(len(pattern)):
+            if pattern[i] not in dict:
+                if separate[i] in dict.values():  # Check if word is already assigned
+                    return False
+                dict[pattern[i]] = separate[i]
+            else:
+                if dict[pattern[i]] != separate[i]:  # Check if word matches the pattern
+                    return False
+        
+        return True
