@@ -1,0 +1,14 @@
+class Solution(object):
+    def convertToTitle(self, columnNumber):
+        """
+        :type columnNumber: int
+        :rtype: str
+        """
+        res = []
+        while columnNumber > 0:
+            columnNumber -= 1  # Adjust to 0-based index
+            remainder = columnNumber % 26
+            res.append(chr(ord('A') + remainder))  # Correct function usage
+            columnNumber //= 26  # Update column number
+        
+        return ''.join(res[::-1])  # Reverse the list and join into a string
